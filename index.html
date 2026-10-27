@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acrylic Keyholder Collection | Merch Gallery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'Noto Sans JP', 'sans-serif'] },
+          colors: { mercari: '#ff0211', 'mercari-hover': '#e0000e' }
+        }
+      }
+    }
+  </script>
+  <style>
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); }
+    ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 4px; }
+    .dark ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); }
+    .square-aspect { aspect-ratio: 1 / 1; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-neutral-900 text-gray-900 dark:text-gray-100 font-sans min-h-full transition-colors duration-200 antialiased">
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-30 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md border-b border-gray-200 dark:border-neutral-800">
+    <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-yellow-400 via-rose-500 to-purple-600 p-[2px]">
+          <div class="w-full h-full bg-white dark:bg-neutral-900 rounded-full flex items-center justify-center">
+            <i class="fa-solid font-bold text-xs text-rose-500">J</i>
+          </div>
+        </div>
+        <span class="font-bold text-lg tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">J's Factory</span>
+      </div>
+
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-neutral-800 text-gray-600 dark:text-gray-300 transition-colors" title="テーマ切り替え">
+          <i class="fa-solid fa-moon dark:hidden"></i>
+          <i class="fa-solid fa-sun hidden dark:inline"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-5xl mx-auto px-4 py-8">
+    
+    <!-- Profile Section -->
+    <section id="profile-section" class="mb-10 py-8 px-6 sm:px-8 rounded-3xl border border-gray-200/80 dark:border-neutral-800 bg-cover bg-center bg-no-repeat shadow-sm relative overflow-hidden">
+      <div class="absolute inset-0 bg-white/75 dark:bg-neutral-900/80 backdrop-blur-[2px]"></div>
+      <div class="relative z-10 flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12">
+        <div class="relative group">
+          <div class="w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-tr from-amber-400 via-rose-500 to-purple-600 p-[3px] shadow-lg transform transition group-hover:scale-105 duration-300">
+            <div class="w-full h-full bg-white dark:bg-neutral-900 rounded-full p-1 overflow-hidden">
+              <img id="profile-avatar-img" src="" alt="Shop Avatar" class="w-full h-full object-cover rounded-full">
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 text-center md:text-left space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
+            <h1 class="text-2xl font-bold tracking-tight">@jchan(J's Factory)</h1>
+            <a href="https://jp.mercari.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-mercari hover:bg-mercari-hover rounded-xl shadow-md transition-all">
+              <i class="fa-solid fa-store mr-2"></i> メルカリShopを見る
+            </a>
+          </div>
+          <div class="flex justify-center md:justify-start space-x-6 text-sm">
+            <div>
+              <span id="stat-count" class="font-bold text-gray-900 dark:text-white">0</span>
+              <span class="text-gray-600 dark:text-gray-400">アイテム</span>
+            </div>
+          </div>
+          <div class="text-sm space-y-1 text-gray-800 dark:text-gray-200 max-w-lg">
+            <p class="font-semibold text-gray-900 dark:text-white">ハンドメイドオリジナルアクリルキーホルダー</p>
+            <p>オリジナルのアクリルキーホルダーをメルカリにて出品中✨</p>
+            <p class="text-xs text-gray-600 dark:text-gray-400 pt-1">📦 匿名配送対応 | ⚡ 即購入OK | </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <section class="mb-6 space-y-4">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center space-x-2 overflow-x-auto no-scrollbar w-full md:w-auto pb-1 md:pb-0" id="category-tabs">
+          <button data-category="ALL" class="cat-btn active px-4 py-2 text-xs font-semibold rounded-full bg-gray-900 text-white dark:bg-white dark:text-gray-900 transition-all whitespace-nowrap">すべて</button>
+          <button data-category="NEW" class="cat-btn px-4 py-2 text-xs font-semibold rounded-full bg-gray-200 dark:bg-neutral-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-neutral-700 transition-all whitespace-nowrap">✨ 新作</button>
+          <button data-category="KEYCHAIN" class="cat-btn px-4 py-2 text-xs font-semibold rounded-full bg-gray-200 dark:bg-neutral-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-neutral-700 transition-all whitespace-nowrap">🔑 アクキー</button>
+          <button data-category="CHARM" class="cat-btn px-4 py-2 text-xs font-semibold rounded-full bg-gray-200 dark:bg-neutral-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-neutral-700 transition-all whitespace-nowrap">✨ ミニチャーム</button>
+        </div>
+        <div class="flex items-center space-x-2 w-full md:w-auto">
+          <div class="relative min-w-[130px]">
+            <select id="sort-select" class="w-full pl-3 pr-8 py-2 text-xs font-semibold rounded-full bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 focus:outline-none focus:ring-2 focus:ring-rose-500/50 appearance-none cursor-pointer">
+              <option value="newest">✨ 新しい順</option>
+              <option value="oldest">📜 古い順</option>
+              <option value="likes">❤️ いいね数順</option>
+              <option value="price-asc">💰 価格の安い順</option>
+              <option value="price-desc">💎 価格の高い順</option>
+            </select>
+            <i class="fa-solid fa-chevron-down absolute right-3 top-2.5 text-[10px] text-gray-400 pointer-events-none"></i>
+          </div>
+          <div class="relative flex-1 md:w-56">
+            <input type="text" id="search-input" placeholder="キーワード検索..." class="w-full pl-9 pr-4 py-2 text-xs rounded-full bg-white dark:bg-neutral-800 border border-gray-200 dark:border-neutral-700 focus:outline-none focus:ring-2 focus:ring-rose-500/50 transition">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-xs text-gray-400"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section>
+      <div id="loading-state" class="text-center py-16 text-gray-500 dark:text-gray-400">
+        <i class="fa-solid fa-spinner fa-spin text-3xl text-rose-500 mb-3"></i>
+        <p class="text-xs font-medium">ショップデータを読み込み中...</p>
+      </div>
+      <div id="product-grid" class="hidden grid grid-cols-3 gap-0.5 sm:gap-1 rounded-2xl overflow-hidden bg-gray-200 dark:bg-neutral-800 border border-gray-200 dark:border-neutral-800"></div>
+      <div id="empty-state" class="hidden text-center py-16 text-gray-500 dark:text-gray-400">
+        <i class="fa-regular fa-folder-open text-4xl mb-3 text-gray-300 dark:text-neutral-700"></i>
+        <p class="text-sm font-medium">該当する商品が見つかりませんでした。</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Detail Modal -->
+  <div id="detail-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200">
+    <div class="bg-white dark:bg-neutral-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl flex flex-col md:flex-row transform scale-95 transition-transform duration-200" id="detail-modal-card">
+      <div class="relative md:w-3/5 bg-black flex items-center justify-center min-h-[300px] md:min-h-[500px]">
+        <img id="modal-img" src="" alt="" class="w-full h-full object-contain max-h-[60vh] md:max-h-[85vh]">
+        <div id="modal-categories-badge" class="absolute top-4 left-4 flex flex-wrap gap-1"></div>
+      </div>
+      <div class="md:w-2/5 p-6 flex flex-col justify-between overflow-y-auto max-h-[50vh] md:max-h-[85vh] bg-white dark:bg-neutral-900">
+        <div>
+          <div class="flex items-center justify-between pb-4 border-b border-gray-100 dark:border-neutral-800">
+            <div class="flex items-center space-x-3">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-400 to-rose-500 p-[2px]">
+                <img id="modal-avatar-img" src="" class="w-full h-full object-cover rounded-full">
+              </div>
+              <div>
+                <p class="text-xs font-bold leading-none">J's Factory</p>
+                <p class="text-[10px] text-gray-400 mt-0.5">メルカリ出品中</p>
+              </div>
+            </div>
+            <button id="close-modal-btn" class="text-gray-400 hover:text-gray-700 dark:hover:text-white p-1 rounded-full transition">
+              <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+          </div>
+          <div class="my-4">
+            <h2 id="modal-title" class="text-lg font-bold text-gray-900 dark:text-white leading-snug"></h2>
+            <div class="mt-2 flex items-baseline space-x-2">
+              <span id="modal-price" class="text-2xl font-extrabold text-rose-600 dark:text-rose-400"></span>
+              <span class="text-xs text-gray-400 font-normal">（送料込み・税込）</span>
+            </div>
+          </div>
+          <div id="modal-specs" class="bg-gray-50 dark:bg-neutral-800/60 p-3 rounded-xl mb-4 text-xs space-y-1.5 text-gray-600 dark:text-gray-300">
+            <div class="flex items-center space-x-2">
+              <i class="fa-solid fa-cube text-rose-500 w-4"></i>
+              <span>商品: <strong id="spec-product-type" class="font-semibold text-gray-800 dark:text-gray-100">アクリルキーホルダー</strong></span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <i class="fa-solid fa-key text-rose-500 w-4"></i>
+              <span>付属: <strong id="spec-hardware" class="font-semibold text-gray-800 dark:text-gray-100">ナスカンパーツ（シルバー）</strong></span>
+            </div>
+          </div>
+          <div class="text-xs text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line mb-6" id="modal-description"></div>
+        </div>
+        <div class="pt-4 border-t border-gray-100 dark:border-neutral-800 space-y-3">
+          <div class="flex items-center justify-between">
+            <button id="like-btn" class="flex items-center space-x-1.5 text-gray-500 hover:text-rose-500 transition">
+              <i class="fa-regular fa-heart text-xl" id="like-icon"></i>
+              <span class="text-xs font-semibold" id="like-count">0</span>
+            </button>
+            <button id="share-btn" class="text-gray-500 hover:text-gray-900 dark:hover:text-white text-xs flex items-center space-x-1 transition">
+              <i class="fa-solid fa-share-nodes text-sm"></i>
+              <span>リンクをコピー</span>
+            </button>
+          </div>
+          <a id="modal-mercari-link" href="#" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 bg-mercari hover:bg-mercari-hover text-white text-sm font-bold rounded-xl shadow-md flex items-center justify-center space-x-2 transition-transform transform active:scale-[0.98]">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>メルカリ購入ページへ</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-75"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-gray-900 text-white dark:bg-white dark:text-gray-900 px-4 py-2.5 rounded-xl shadow-lg text-xs font-semibold transform translate-y-20 opacity-0 transition-all duration-300 flex items-center space-x-2">
+    <i class="fa-solid fa-circle-check text-emerald-400 dark:text-emerald-600"></i>
+    <span id="toast-message">メッセージ</span>
+  </div>
+
+  <script>
+    const GITHUB_USER = "jchaan24js";
+    const GITHUB_REPO = "my-portfolio";
+    const GITHUB_BRANCH = "main"; 
+    const DATA_FILE_PATH = "products.json"; 
+    const SETTINGS_FILE_PATH = "settings.json";
+
+    let products = [];
+    let siteSettings = {
+      avatarUrl: "https://raw.githubusercontent.com/jchaan24js/my-portfolio/main/images/1793098597103_4143a264-430c-4b34-ae41-b75a53fc1b3f.png",
+      bgUrl: "https://raw.githubusercontent.com/jchaan24js/my-portfolio/main/images/1793100872808_8a652ff3-f7a8-4476-993d-0d367ff19461_____.png"
+    };
+
+    let currentCategory = 'ALL';
+    let searchQuery = '';
+    let currentSort = 'newest';
+    let selectedProduct = null;
+    let likedItems = JSON.parse(localStorage.getItem('mercari_liked')) || {};
+
+    const productGrid = document.getElementById('product-grid');
+    const loadingState = document.getElementById('loading-state');
+    const emptyState = document.getElementById('empty-state');
+    const statCount = document.getElementById('stat-count');
+    const sortSelect = document.getElementById('sort-select');
+    
+    const detailModal = document.getElementById('detail-modal');
+    const detailModalCard = document.getElementById('detail-modal-card');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const modalImg = document.getElementById('modal-img');
+    const modalAvatarImg = document.getElementById('modal-avatar-img');
+    const modalTitle = document.getElementById('modal-title');
+    const modalPrice = document.getElementById('modal-price');
+    const modalDesc = document.getElementById('modal-description');
+    const modalCategoriesBadge = document.getElementById('modal-categories-badge');
+    const modalMercariLink = document.getElementById('modal-mercari-link');
+    const specProductType = document.getElementById('spec-product-type');
+    const specHardware = document.getElementById('spec-hardware');
+    const likeBtn = document.getElementById('like-btn');
+    const likeIcon = document.getElementById('like-icon');
+    const likeCount = document.getElementById('like-count');
+    const shareBtn = document.getElementById('share-btn');
+    const profileSection = document.getElementById('profile-section');
+    const profileAvatarImg = document.getElementById('profile-avatar-img');
+
+    function base64ToUtf8(str) {
+      return decodeURIComponent(Array.prototype.map.call(atob(str), c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''));
+    }
+
+    async function loadDataFromGitHub() {
+      loadingState.classList.remove('hidden');
+      productGrid.classList.add('hidden');
+
+      const productApiUrl = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${DATA_FILE_PATH}`;
+      try {
+        const res = await fetch(productApiUrl);
+        if (res.ok) {
+          const data = await res.json();
+          products = JSON.parse(base64ToUtf8(data.content));
+        }
+      } catch (e) {
+        console.error(e);
+      }
+
+      const settingsApiUrl = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${SETTINGS_FILE_PATH}`;
+      try {
+        const res = await fetch(settingsApiUrl);
+        if (res.ok) {
+          const data = await res.json();
+          siteSettings = JSON.parse(base64ToUtf8(data.content));
+        }
+      } catch (e) {
+        console.error(e);
+      } finally {
+        loadingState.classList.add('hidden');
+        productGrid.classList.remove('hidden');
+        applySiteSettings();
+        renderProducts();
+      }
+    }
+
+    function applySiteSettings() {
+      if (siteSettings.bgUrl) profileSection.style.backgroundImage = `url('${siteSettings.bgUrl}')`;
+      if (siteSettings.avatarUrl) {
+        profileAvatarImg.src = siteSettings.avatarUrl;
+        modalAvatarImg.src = siteSettings.avatarUrl;
+      }
+    }
+
+    function renderProducts() {
+      let filtered = products.filter(item => {
+        const itemCats = item.categories || [item.category];
+        const matchesCategory = currentCategory === 'ALL' || itemCats.includes(currentCategory);
+        const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                              (item.description && item.description.toLowerCase().includes(searchQuery.toLowerCase()));
+        return matchesCategory && matchesSearch;
+      });
+
+      filtered.sort((a, b) => {
+        const likesA = (a.likes || 0) + (likedItems[a.id] ? 1 : 0);
+        const likesB = (b.likes || 0) + (likedItems[b.id] ? 1 : 0);
+        const timeA = Number(a.createdAt) || 0;
+        const timeB = Number(b.createdAt) || 0;
+        if (currentSort === 'newest') return timeB - timeA;
+        if (currentSort === 'oldest') return timeA - timeB;
+        if (currentSort === 'likes') return likesB - likesA;
+        if (currentSort === 'price-asc') return a.price - b.price;
+        if (currentSort === 'price-desc') return b.price - a.price;
+        return 0;
+      });
+
+      statCount.textContent = products.length;
+
+      if (filtered.length === 0) {
+        productGrid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      productGrid.innerHTML = filtered.map(item => `
+        <div data-id="${item.id}" class="product-card group relative overflow-hidden bg-gray-100 dark:bg-neutral-900 cursor-pointer square-aspect">
+          <img src="${item.image}" alt="${item.title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out">
+          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-between p-3 text-white">
+            <div class="flex justify-end">
+              <span class="bg-black/60 backdrop-blur-md text-[10px] font-bold px-2 py-0.5 rounded-full text-white">¥${item.price.toLocaleString()}</span>
+            </div>
+            <div class="flex items-center justify-center space-x-4">
+              <span class="flex items-center space-x-1 font-bold text-xs sm:text-sm">
+                <i class="fa-solid fa-heart text-rose-500"></i>
+                <span>${(item.likes || 0) + (likedItems[item.id] ? 1 : 0)}</span>
+              </span>
+              <span class="flex items-center space-x-1 font-bold text-xs sm:text-sm">
+                <i class="fa-solid fa-up-right-and-down-left-from-center text-xs"></i>
+                <span class="hidden sm:inline">詳細</span>
+              </span>
+            </div>
+            <p class="text-[11px] font-medium truncate text-center text-gray-200 w-full px-1">${item.title}</p>
+          </div>
+        </div>
+      `).join('');
+
+      document.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('click', () => openDetailModal(card.getAttribute('data-id')));
+      });
+    }
+
+    function openDetailModal(id) {
+      selectedProduct = products.pages?.find?.(p => p.id === id) || products.find(p => p.id === id);
+      if (!selectedProduct) return;
+
+      modalImg.src = selectedProduct.image;
+      modalAvatarImg.src = siteSettings.avatarUrl;
+      modalTitle.textContent = selectedProduct.title;
+      modalPrice.textContent = `¥${selectedProduct.price.toLocaleString()}`;
+      modalDesc.textContent = selectedProduct.description || '詳細情報は準備中です。メルカリページよりご確認ください。';
+      modalMercariLink.href = selectedProduct.mercariUrl || 'https://jp.mercari.com';
+      specProductType.textContent = selectedProduct.productType || 'アクリルキーホルダー';
+      specHardware.textContent = selectedProduct.hardware || 'ナスカンパーツ（シルバー）';
+
+      const catNames = { NEW: '✨ 新作', KEYCHAIN: '🔑 アクキー', CHARM: '✨ ミニチャーム' };
+      const itemCats = selectedProduct.categories || [selectedProduct.category || 'NEW'];
+      modalCategoriesBadge.innerHTML = itemCats.map(c => `
+        <span class="text-[10px] font-bold tracking-wider px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-white uppercase">${catNames[c] || c}</span>
+      `).join('');
+
+      updateLikeUI();
+      detailModal.classList.remove('opacity-0', 'pointer-events-none');
+      detailModalCard.classList.remove('scale-95');
+      detailModalCard.classList.add('scale-100');
+    }
+
+    function closeDetailModal() {
+      detailModal.classList.add('opacity-0', 'pointer-events-none');
+      detailModalCard.classList.remove('scale-100');
+      detailModalCard.classList.add('scale-95');
+      selectedProduct = null;
+    }
+
+    function updateLikeUI() {
+      if (!selectedProduct) return;
+      const isLiked = !!likedItems[selectedProduct.id];
+      likeCount.textContent = (selectedProduct.likes || 0) + (isLiked ? 1 : 0);
+      likeIcon.className = isLiked ? 'fa-solid fa-heart text-rose-500 text-xl' : 'fa-regular fa-heart text-xl';
+    }
+
+    likeBtn.addEventListener('click', () => {
+      if (!selectedProduct) return;
+      if (likedItems[selectedProduct.id]) delete likedItems[selectedProduct.id];
+      else likedItems[selectedProduct.id] = true;
+      localStorage.setItem('mercari_liked', JSON.stringify(likedItems));
+      updateLikeUI();
+      renderProducts();
+    });
+
+    shareBtn.addEventListener('click', () => {
+      if (!selectedProduct) return;
+      const tempInput = document.createElement('input');
+      tempInput.value = `${selectedProduct.title} - ${selectedProduct.mercariUrl}`;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand('copy');
+      document.body.removeChild(tempInput);
+      showToast('商品リンクをコピーしました！');
+    });
+
+    closeModalBtn.addEventListener('click', closeDetailModal);
+    detailModal.addEventListener('click', (e) => { if (e.target === detailModal) closeDetailModal(); });
+
+    document.getElementById('category-tabs').addEventListener('click', (e) => {
+      const btn = e.target.closest('.cat-btn');
+      if (!btn) return;
+      document.querySelectorAll('.cat-btn').forEach(b => {
+        b.className = 'cat-btn px-4 py-2 text-xs font-semibold rounded-full bg-gray-200 dark:bg-neutral-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-neutral-700 transition-all whitespace-nowrap';
+      });
+      btn.className = 'cat-btn active px-4 py-2 text-xs font-semibold rounded-full bg-gray-900 text-white dark:bg-white dark:text-gray-900 transition-all whitespace-nowrap';
+      currentCategory = btn.getAttribute('data-category');
+      renderProducts();
+    });
+
+    sortSelect.addEventListener('change', (e) => { currentSort = e.target.value; renderProducts(); });
+    document.getElementById('search-input').addEventListener('input', (e) => { searchQuery = e.target.value; renderProducts(); });
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-message').textContent = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => toast.classList.add('translate-y-20', 'opacity-0'), 3000);
+    }
+
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    loadDataFromGitHub();
+  </script>
+</body>
+</html>
