@@ -1,6 +1,32 @@
 {
   "avatarUrl": "https://raw.githubusercontent.com/jchaan24js/my-portfolio/main/images/1793104740285_4143a264-430c-4b34-ae41-b75a53fc1b3f.png",
   "bgUrl": "https://raw.githubusercontent.com/jchaan24js/my-portfolio/main/images/1793104749433_8a652ff3-f7a8-4476-993d-0d367ff19461_____.png",
+  "snsLinks": [
+    {
+      "name": "X",
+      "url": "https://x.com/Jchan_24_",
+      "iconType": "text",
+      "iconValue": "X"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/jchaan24?srtk=MXRkdTA1a2pmZTMyMg%3D%3D&utm_source=qr",
+      "iconType": "fa",
+      "iconValue": "fa-brands fa-instagram"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://youtube.com/@jchan24js?si=U87BaYGFilLt8AuL",
+      "iconType": "fa",
+      "iconValue": "fa-brands fa-youtube"
+    },
+    {
+      "name": "LINEスタンプ",
+      "url": "https://line.me/S/shop/sticker/author/5795761",
+      "iconType": "fa",
+      "iconValue": "fa-brands fa-line"
+    }
+  ],
   "categories": [
     {
       "id": "ALL",
