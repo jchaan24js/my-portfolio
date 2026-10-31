@@ -1,1 +1,21 @@
-[]
+[
+  {
+    "id": "item-1793405405863",
+    "title": "透明",
+    "price": 990,
+    "categories": [
+      "NEW"
+    ],
+    "productType": "アクリルキーホルダー",
+    "hardware": "ナスカン（シルバー）",
+    "charm": "星型チャーム",
+    "images": [
+      "https://raw.githubusercontent.com/jchaan24js/my-portfolio/main/images/1793405396241_IMG_5520.PNG"
+    ],
+    "image": "https://raw.githubusercontent.com/jchaan24js/my-portfolio/main/images/1793405396241_IMG_5520.PNG",
+    "mercariUrl": "http://a",
+    "description": "fds",
+    "likes": 0,
+    "createdAt": 1793405405864
+  }
+]
