@@ -14,20 +14,5 @@
     "description": "未来的なサイバーキャットのデザインをあしらった透明感抜群のアクリルキーホルダーです。\n\n・光の当たり加減でフチが綺麗に映えます。\n・バッグや鍵のワンポイントにぴったり！\n・サイズ: 約60mm × 55mm",
     "likes": 38,
     "createdAt": 1000
-  },
-  {
-    "id": "item-2",
-    "title": "オーロラクリスタルベア アクキー",
-    "price": 1450,
-    "categories": [
-      "KEYCHAIN"
-    ],
-    "productType": "アクリルキーホルダー",
-    "hardware": "星型ナスカン",
-    "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&auto=format&fit=crop&q=80",
-    "mercariUrl": "https://jp.mercari.com",
-    "description": "見る角度によってピンクやブルーに色合いが変化する幻想的なアイテムです。\n\n・サイズ: 70mm",
-    "likes": 52,
-    "createdAt": 2000
   }
 ]
