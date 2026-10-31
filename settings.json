@@ -7,16 +7,16 @@
       "name": "すべて"
     },
     {
-      "id": "NEW",
-      "name": "✨ 新作"
-    },
-    {
       "id": "KEYCHAIN",
       "name": "🔑 アクキー"
     },
     {
-      "id": "CHARM",
-      "name": "✨ ミニチャーム"
+      "id": "ANGEL",
+      "name": "天使"
+    },
+    {
+      "id": "ANIMAL",
+      "name": "動物"
     }
   ],
   "productTypes": [
